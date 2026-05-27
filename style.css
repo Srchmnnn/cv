@@ -2,86 +2,215 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial;
+    font-family:"Segoe UI", Arial, sans-serif;
 }
 
 body{
-    background:#0f172a;
-    padding:40px;
+    min-height:100vh;
+    background:linear-gradient(135deg,#020617,#0f172a,#1e3a8a);
+    padding:45px;
+    color:#0f172a;
 }
 
 .container{
     display:flex;
-    max-width:1300px;
+    max-width:1250px;
     margin:auto;
-    background:white;
-    border-radius:20px;
+    background:rgba(255,255,255,0.96);
+    border-radius:28px;
     overflow:hidden;
+    box-shadow:0 25px 70px rgba(0,0,0,0.35);
 }
 
 .left{
-    width:35%;
-    background:linear-gradient(#2563eb,#1e3a8a);
+    width:36%;
+    background:linear-gradient(180deg,#4f46e5,#2563eb,#1e3a8a);
     color:white;
-    padding:40px;
+    padding:45px 38px;
+    position:relative;
+}
+
+.left::before{
+    content:"";
+    position:absolute;
+    top:-80px;
+    right:-80px;
+    width:220px;
+    height:220px;
+    background:rgba(255,255,255,0.12);
+    border-radius:50%;
 }
 
 .right{
-    width:65%;
-    padding:50px;
+    width:64%;
+    padding:55px 65px;
+    background:#f8fafc;
 }
 
 .profile{
-    width:220px;
-    height:220px;
+    width:210px;
+    height:210px;
     border-radius:50%;
     object-fit:cover;
-    border:6px solid white;
+    border:6px solid rgba(255,255,255,0.9);
     display:block;
-    margin:auto;
+    margin:0 auto 25px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.left h4{
+    text-align:center;
+    letter-spacing:5px;
+    font-size:15px;
+    font-weight:500;
+    color:#c7d2fe;
+    margin-bottom:12px;
 }
 
 h1{
-    margin-top:20px;
-    font-size:38px;
+    text-align:center;
+    font-size:34px;
+    letter-spacing:2px;
+    margin-bottom:18px;
 }
 
 .line{
-    width:120px;
-    height:3px;
-    background:white;
-    margin:20px 0;
+    width:110px;
+    height:4px;
+    background:linear-gradient(90deg,#f97316,#facc15);
+    margin:20px auto 35px;
+    border-radius:10px;
+}
+
+.contact{
+    margin-bottom:45px;
 }
 
 .contact p{
-    margin:10px 0;
+    margin:14px 0;
+    font-size:16px;
+    line-height:1.6;
+}
+
+.left h3{
+    margin:35px 0 18px;
+    font-size:16px;
+    letter-spacing:4px;
+    color:#c7d2fe;
+    text-align:center;
 }
 
 .skills{
-    margin-top:20px;
+    margin-top:15px;
 }
 
 .skills span{
     display:inline-block;
-    padding:10px 20px;
-    background:#1e40af;
+    padding:9px 16px;
+    background:rgba(15,23,42,0.45);
+    border:1px solid rgba(255,255,255,0.18);
     border-radius:30px;
-    margin:5px;
+    margin:6px 4px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.skills span:hover{
+    background:white;
+    color:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+.left ul{
+    list-style:none;
+    margin-left:0;
+}
+
+.left li{
+    margin:12px 0;
+    padding-left:18px;
+    position:relative;
+    line-height:1.5;
+}
+
+.left li::before{
+    content:"•";
+    position:absolute;
+    left:0;
+    color:#facc15;
 }
 
 section{
-    margin-bottom:50px;
+    margin-bottom:42px;
+    background:white;
+    padding:28px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(15,23,42,0.08);
+    border-left:5px solid #2563eb;
 }
 
 h2{
     color:#1d4ed8;
-    margin-bottom:20px;
+    margin-bottom:18px;
+    font-size:22px;
+    letter-spacing:3px;
+    text-transform:uppercase;
 }
 
-ul{
-    margin-left:20px;
+.right h3{
+    color:#0f172a;
+    margin:12px 0;
+    font-size:20px;
 }
 
-li{
+p{
+    font-size:17px;
+    line-height:1.8;
+    color:#1f2937;
+}
+
+.right ul{
+    margin-left:22px;
+    margin-top:12px;
+}
+
+.right li{
     margin:10px 0;
+    font-size:16px;
+    line-height:1.6;
+}
+
+a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:900px){
+    body{
+        padding:15px;
+    }
+
+    .container{
+        flex-direction:column;
+        border-radius:20px;
+    }
+
+    .left,
+    .right{
+        width:100%;
+        padding:35px 25px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .profile{
+        width:180px;
+        height:180px;
+    }
+
+    section{
+        padding:22px;
+    }
 }
